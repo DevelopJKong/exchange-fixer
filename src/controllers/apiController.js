@@ -5,13 +5,9 @@ export const home = async (req, res) => {
     const from = "EUR";
     const amount = 5;
     const rate = await (
-        await fetch(`https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`, {
+        await fetch(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`, {
             method: "GET",
-            headers: {
-                apiKey: process.env.FIXER_API_KEY,
-            },
         })
     ).json();
-
     return res.render("home", { result: rate.result });
 };

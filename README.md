@@ -6,7 +6,7 @@
 <h3>목표 환전이 되도록 구현하기👀</h3>
 <ul>
     <li>
-        <span>api 찾기</span>
+        <b>api 찾기</b>
     </li>
     <li>
         <b>node-fetch 사용해보기</b>
