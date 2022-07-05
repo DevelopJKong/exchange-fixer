@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import morgan from "morgan";
-import globalRouter from "./routers/apiRouter";
+import globalRouter from "./routers/globalRouter";
 
 const app = express();
 const logger = morgan("dev");
@@ -10,6 +10,7 @@ app.set("views", process.cwd() + "/src/views");
 
 app.use(logger);
 app.use("/", globalRouter);
+app.use("/convert",)
 
 const PORT = process.env.PORT || 5050;
 
