@@ -10,6 +10,6 @@ export const fromToConverter = async (req,res) => {
     const amount = 5;
     const { body } = await got.get(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`);
     const data = JSON.parse(body);
-    
-    return 
+    console.log(data);
+    return res.render("convert");
 }
