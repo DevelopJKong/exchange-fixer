@@ -5,7 +5,7 @@ export const home = async (req, res) => {
 };
 
 export const fromToConverter = async (req,res) => {
-    const to = "KRW";
+    const to = "JPY";
     const from = "USD";
     const amount = 5;
     const { body } = await got.get(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`);
